@@ -17,3 +17,5 @@ export default class Documo {
     this.faxNumbers = new FaxNumbers(this.encodedToken)
   }
 }
+
+export * from './classes'
