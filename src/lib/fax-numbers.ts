@@ -24,6 +24,25 @@ export class FaxNumbers {
     })
   }
 
+  public async getAll (id: string): Promise<Number[]> {
+    try {
+      const response = await this._api.get(`/`);
+
+      if (!response || !response.data) {
+        const error = new Error('Invalid Request')
+        throw error
+      }
+
+      const result = response.data
+
+      if (result.count === 0) return []
+
+      return result.rows.map(o => Number.fromJson(o))
+    } catch (err) {
+      throw err
+    }
+  }
+
   public async get (id: string): Promise<Number> {
     try {
       const response = await this._api.get(`/${id}`);
