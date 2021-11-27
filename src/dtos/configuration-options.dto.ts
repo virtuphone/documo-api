@@ -1,3 +1,3 @@
 export interface ConfigurationOptions {
-    encodedToken: string
+    encodedToken?: string
 }
