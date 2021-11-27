@@ -18,4 +18,4 @@ export default class Documo {
   }
 }
 
-export * from './classes'
+export * as DocumoTypes from './classes'

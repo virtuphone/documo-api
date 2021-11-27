@@ -1,1 +1,1 @@
-export * as DocumoNumber from './number.class'
+export * from './number.class'
