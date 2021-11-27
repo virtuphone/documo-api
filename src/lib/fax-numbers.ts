@@ -24,7 +24,7 @@ export class FaxNumbers {
     })
   }
 
-  public async getAll (id: string): Promise<Number[]> {
+  public async getAll (): Promise<Number[]> {
     try {
       const response = await this._api.get(`/`);
 
